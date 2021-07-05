@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+{% load bootstrap4 %}
+{% block content %}
+  <form method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="S'inscrire" class="boxed-btn3 w-100"/>
+  </form>
+  <p><a href="{% url 'login' %}">Vous avez déjà un compte?</a></p>
+{% endblock content %}
